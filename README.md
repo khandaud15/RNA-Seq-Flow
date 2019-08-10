@@ -2,7 +2,7 @@
 
 RNA-Seq analyis using STAR two pass mode for alliging the raw reads and RSEM for transcript quantification using snakemake workflow.
   
-                  ![workflow](DAG.png) 
+   ![workflow](DAG.png) 
 
 ## Required Tools  
 
