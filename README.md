@@ -16,6 +16,8 @@ RNA-Seq analyis using STAR two pass mode for alliging the raw reads and RSEM for
 
  * RSEM(Transcript Quantification)
 
+ ![workflow](DAG.png)
+
 
 ## Setting upconda environment for tools and their dependencies 
 
