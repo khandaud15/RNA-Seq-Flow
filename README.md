@@ -32,12 +32,12 @@ RNA-Seq analyis using STAR two pass mode for alliging the raw reads and RSEM for
 * conda install -c bioconda rsem
 
 
-####Generate the .txt report of all fastqc "run fastqc-summary script in fastqc output directory" 
+#### Generate the .txt report of all fastqc "run fastqc-summary script in fastqc output directory" 
 ```
  python3 fastqc-summary -s $INDIR > "QC_Report.txt"
 ```
 
-##### To quantify the gene expression level and compatibility with RNA-SeQC, the gencode GTF need to be collapsed using the gtex script [collapse_annotation.py](https://github.com/broadinstitute/gtex-pipeline/blob/master/gene_model/collapse_annotation.py)
+#### To quantify the gene expression level and compatibility with RNA-SeQC, the gencode GTF need to be collapsed using the gtex script [collapse_annotation.py](https://github.com/broadinstitute/gtex-pipeline/blob/master/gene_model/collapse_annotation.py)
 ```python
 python3 collapse_annotation.py gencode.v30.GRCh38.genes.gtf gencode.v30.GRCh38.genes.gtf
 ```
