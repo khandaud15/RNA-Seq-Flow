@@ -1,6 +1,8 @@
 # RNA-Seq-Flow
 
-RNA-Seq analyis using STAR two pass mode for alliging the raw reads and RSEM for transcript quantification using snakemake workflow. 
+RNA-Seq analyis using STAR two pass mode for alliging the raw reads and RSEM for transcript quantification using snakemake workflow.
+  
+                  ![workflow](DAG.png) 
 
 ## Required Tools  
 
@@ -15,8 +17,6 @@ RNA-Seq analyis using STAR two pass mode for alliging the raw reads and RSEM for
  * RNA-SeQC(Qualiy Control of RNA-Seq data)
 
  * RSEM(Transcript Quantification)
-
- ![workflow](DAG.png)
 
 
 ## Setting upconda environment for tools and their dependencies 
