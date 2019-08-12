@@ -2,8 +2,8 @@
 	"__default__": {
 		"account": "**********",
 		"time": "12:00:00",
-		"n": 6,
-		"N": 3,
+		"n": 40,
+		"N": 2,
 		"mem": 40000,
 		"partition": "parallel"
 	},
@@ -37,12 +37,12 @@
 	"rule pass2": {
 		"time": "05: 00: 00"
 	},
-        "rule mark_dups": {
-                "time": "05: 00: 00"
+     "rule mark_dups": {
+        "time": "05: 00: 00"
                 
-        },
-        "rule RNA_SeqC": {
-                "time": "05: 00: 00"
+    },
+    "rule RNA_SeqC": {
+        "time": "05: 00: 00"
         },
 	"rule rsem_norm": {
 		"time": "05: 00: 00"
