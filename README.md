@@ -14,14 +14,14 @@ RNA-Seq analyis using STAR two pass mode for alliging the raw reads and RSEM for
 
  * [Picard](https://broadinstitute.github.io/picard/) (Cammand line set  tool to manipulate high-throughput sequencing data)
 
- * [RNA-SeQC](https://software.broadinstitute.org/cancer/cga/rna-seqc)(Qualiy Control metrices of RNA-Seq data)
+ * [RNA-SeQC](https://software.broadinstitute.org/cancer/cga/rna-seqc) (Qualiy Control metrices of RNA-Seq data)
 
- * [RSEM(](https://github.com/deweylab/RSEM)(Accurate quantification of gene and isoform expression levels from RNA-Seq data)
+ * [RSEM(](https://github.com/deweylab/RSEM) (Accurate quantification of gene and isoform expression levels from RNA-Seq data)
 
 
 ## Setting up conda environment for tools and their dependencies 
 
-* Install [anacondo](https://docs.anaconda.com/anaconda/install/) or load it if it's already on your server
+* Install [anaconda](https://docs.anaconda.com/anaconda/install/) or load it if it's already on your server
 
 * conda create --name rnaseq-env
 
