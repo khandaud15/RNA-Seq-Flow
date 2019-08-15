@@ -6,8 +6,7 @@ RNA-Seq analyis using STAR two pass mode for alliging the raw reads and RSEM for
 
 ## Required Tools  
 
- * FastQC (Quality Control) 
-
+ * [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) A quality control tool for high throughput sequence data.
  * Trim-galore ( Adapter Trimming)
 
  * STAR (Allign the reads to reference genome) 
