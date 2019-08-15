@@ -16,7 +16,7 @@ RNA-Seq analyis using STAR two pass mode for alliging the raw reads and RSEM for
 
  * [RNA-SeQC](https://software.broadinstitute.org/cancer/cga/rna-seqc) (Qualiy Control metrices of RNA-Seq data)
 
- * [RSEM(](https://github.com/deweylab/RSEM) (Accurate quantification of gene and isoform expression levels from RNA-Seq data)
+ * [RSEM](https://github.com/deweylab/RSEM) (Accurate quantification of gene and isoform expression levels from RNA-Seq data)
 
 
 ## Setting up conda environment for tools and their dependencies 
