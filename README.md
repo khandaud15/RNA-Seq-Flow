@@ -21,7 +21,7 @@ RNA-Seq analyis using STAR two pass mode for alliging the raw reads and RSEM for
 
 ## Setting up conda environment for tools and their dependencies 
 
-* Install anaconda or load it if it's already on your server
+* Install [anacondo](https://docs.anaconda.com/anaconda/install/) or load it if it's already on your server
 
 * conda create --name rnaseq-env
 
