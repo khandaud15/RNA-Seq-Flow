@@ -159,6 +159,7 @@ rule star_genome:
         --outFileNamePrefix {input.genomedir} \
         --genomeFastaFiles {input.fasta} \
         --sjdbGTFfile {input.gtf} \
+        --limitSjdbInsertNsj 1637800 \
         --sjdbFileChrStartEnd  {input.sjs} \
         --sjdbOverhang {params.overhang}
           """
@@ -196,6 +197,7 @@ rule pass2:
         --alignSJoverhangMin 8 \
         --alignSJDBoverhangMin 1 \
         --sjdbScore 1 \
+        --outBAMsortingThreadN 5 \
         --limitBAMsortRAM 50000000000
         """
 
@@ -211,6 +213,7 @@ rule mark_dups:
     resources:
        mem_mb = 10000
     shell: """
+         module load picard
         {params.picard} MarkDuplicates {params.rm} INPUT={input.bam} OUTPUT={output.dbam} METRICS_FILE={output.metric}
           """
 
