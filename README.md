@@ -38,7 +38,7 @@
  STAR  --runMode genomeGenerate --runThreadN 24 --genomeDir ./ --genomeFastaFiles hg38_noALT_noHLA_noDecoy_ERCC.fa 
 ```
 
-#### Generate a combined fastqc report for all the samples (.txt) 
+#### To Generate a combined fastqc report for all the samples (.txt) 
 ```
  python3 fastqc-summary -s $INDIR > "QC_Report.txt"
 ```
@@ -81,7 +81,7 @@ python3 collapse_annotation.py gencode.v30.GRCh38.genes.gtf gencode.v30.GRCh38.g
 cat gencode.v30.GRCh38.genes.gtf ERCC92.genes.patched.gtf \
     > gencode.v30.ERCC.genes.gtf
 ```
-#### Run the pipeline on cluster using this command 'modify cluster.json  parameters according to your cluster configuration 
+#### To Run the pipeline on cluster using this command 'modify cluster.json  parameters according to your cluster configuration 
 ```
 snakemake -j 999 --configfile config.yaml --use-conda --nolock --cluster-config cluster.json --cluster "sbatch -A {cluster.account} -p {cluster.partition}  -N {cluster.N} -n {cluster.n}  -t {cluster.time} --mem {cluster.mem}"
 ```
