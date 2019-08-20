@@ -43,8 +43,6 @@
  python3 fastqc-summary -s $INDIR > "QC_Report.txt"
 ```
 
-#### To quantify the gene expression levels and compatibility with RNA-SeQC, the gencode GTF needs to be collapsed using the `GTex` script [collapse_annotation.py](https://github.com/broadinstitute/gtex-pipeline/blob/master/gene_model/collapse_annotation.py)
-
 #### The ERCC GTF file was download from [broadinstitute](https://personal.broadinstitute.org/francois/resources/) and Gene- and transcript-level attributes were added to the ERCC GTF with the following Python code taken from GTexTopMed github page
 ```python
 with open('ERCC92.gtf') as exon_gtf, open('ERCC92.genes.patched.gtf', 'w') as gene_gtf:
@@ -77,7 +75,7 @@ for line in exon_gtf:
     f[8] = ' '.join(attr_str[:2])
     gene_gtf.write('\t'.join(f[:2]+['exon']+f[3:])+'\n')
  ```   
-
+#### To quantify the gene expression levels and compatibility with RNA-SeQC, the gencode GTF needs to be collapsed using the `GTex` script [collapse_annotation.py](https://github.com/broadinstitute/gtex-pipeline/blob/master/gene_model/collapse_annotation.py)
 ```python
 python3 collapse_annotation.py gencode.v30.GRCh38.genes.gtf gencode.v30.GRCh38.genes.gtf
 cat gencode.v30.GRCh38.genes.gtf ERCC92.genes.patched.gtf \
