@@ -43,7 +43,7 @@
  python3 fastqc-summary -s $INDIR > "QC_Report.txt"
 ```
 
-#### The ERCC GTF file was download from [broadinstitute](https://personal.broadinstitute.org/francois/resources/) and Gene- and transcript-level attributes were added to the ERCC GTF with the following Python code taken from GTexTopMed github page
+#### The ERCC GTF file was download from [broadInstitute](https://personal.broadinstitute.org/francois/resources/) and Gene- and transcript-level attributes were added to the ERCC GTF with the following Python code taken from GTexTopMed github page
 ```python
 with open('ERCC92.gtf') as exon_gtf, open('ERCC92.genes.patched.gtf', 'w') as gene_gtf:
 for line in exon_gtf:
