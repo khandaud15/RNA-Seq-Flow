@@ -29,7 +29,7 @@ reference:
   rsemgenomedir:
     hg38: $refdir/rsemindex/hg38/hg38
 
-  collapsed_gtf: $sourcedir/RNA-SeqC/gencode.v30.genes.gtf
+  collapsed_gtf: $sourcedir/RNA-SeqC/gencode.v30.GRCh38.genes.gtf
 
 # directory structure for input and output files
 
