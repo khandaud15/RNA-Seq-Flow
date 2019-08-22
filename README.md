@@ -1,6 +1,6 @@
 # RNA-Seq-Flow
 
- RNA-Seq Flow is the script written in python snakemake format which starts from the raw fastq files and ends all the way to give you gene and Isoform level count using RSEM, to Increase the mapping effeciency, it does 2nd pass STAR Allignemnt by indexing the genome again  using the  merged SJ.0UT.tab files from the 1st pass. for the quality control it does Fatqc as weel as does trimming though Trim-Galore.
+ RNA-Seq Flow is the script written in python snakemake format which starts from the raw fastq files and ends all the way to give you gene and Isoform level count using RSEM, to Increase the mapping effeciency, it does 2nd pass STAR Allignment by indexing the genome again  using the  merged SJ.0UT.tab files from the 1st pass. for the quality control it does Fastqc as well as does trimming though Trim-Galore.
 
    ![workflow](DAG.png) 
 
@@ -34,18 +34,18 @@
 * conda install -c bioconda rsem
 
 #### Use STAR to index the genome for 1st pass allignment, the 2nd pass allignemnt uses the new index from merged SJ.out.tab files from the  script
-```
+```python
  STAR  --runMode genomeGenerate --runThreadN 24 --genomeDir ./ --genomeFastaFiles hg38.fa 
 ```
-####  To Generate a combined fastqc report for all the samples (.txt) 
-```
+#### To Generate a combined fastqc report for all the samples (.txt) 
+```python
  python3 fastqc-summary -s $INDIR > "QC_Report.txt"
 ```
 #### To quantify the gene expression levels and compatibility with RNA-SeQC, the gencode GTF needs to be collapsed using the `GTex` script [collapse_annotation.py](https://github.com/broadinstitute/gtex-pipeline/blob/master/gene_model/collapse_annotation.py)
 ```python
 python3 collapse_annotation.py gencode.v30.GRCh38.genes.gtf gencode.v30.GRCh38.genes.gtf
 ```
-#### Run the pipeline on cluster using this command 'modify cluster.json  parameters according to your cluster configuration 
+#### To Run the pipeline on cluster using this command 'modify cluster.json  parameters according to your cluster configuration 
 ```
 snakemake -j 999 --configfile config.yaml --use-conda --nolock --cluster-config cluster.json --cluster "sbatch -A {cluster.account} -p {cluster.partition}  -N {cluster.N} -n {cluster.n}  -t {cluster.time} --mem {cluster.mem}"
 ```
