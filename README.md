@@ -34,7 +34,7 @@
 * conda install -c bioconda rsem
 
 #### Use STAR to index the genome for 1st pass allignment, the 2nd pass allignemnt uses the new index from merged SJ.out.tab files from the  script
-```python
+```
  STAR  --runMode genomeGenerate --runThreadN 24 --genomeDir ./ --genomeFastaFiles hg38.fa 
 ```
 #### To Generate a combined fastqc report for all the samples (.txt) 
