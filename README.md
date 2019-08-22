@@ -38,7 +38,7 @@
  STAR  --runMode genomeGenerate --runThreadN 24 --genomeDir ./ --genomeFastaFiles hg38.fa 
 ```
 #### To Generate a combined fastqc report for all the samples (.txt) 
-```python
+```
  python3 fastqc-summary -s $INDIR > "QC_Report.txt"
 ```
 #### To quantify the gene expression levels and compatibility with RNA-SeQC, the gencode GTF needs to be collapsed using the `GTex` script [collapse_annotation.py](https://github.com/broadinstitute/gtex-pipeline/blob/master/gene_model/collapse_annotation.py)
