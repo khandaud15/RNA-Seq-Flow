@@ -8,12 +8,12 @@ from util.varsub import varsub
 configfile: "config.yaml"
 varsub(config)
 
-#Wildcard rule which takes all the fastq files ending with .fq.gz
-
+# A snakemake regular expression matching the forward mate FASTQ files.
 SAMPLES, = glob_wildcards(config['datadirs']['fastq'] + "/" + "{file}_1.fq.gz")
+# Patterns for the 1st mate and the 2nd mate using the 'sample' wildcard.
 READS = ["1", "2"]
 
-
+# Rules -----------------------------------------------------------------------------------------
 rule all:
    input:
         config['reference']['rsemgenomedir']['hg38'] + ".n2g.idx.fa",
