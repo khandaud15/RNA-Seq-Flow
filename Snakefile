@@ -259,7 +259,7 @@ rule rsem_norm:
         --quiet \
         --no-qualities \
         -p {threads} \
-        --forward-prob 0.5 \
+        --forward-prob 1.0 \
         --seed-length 25 \
         --fragment-length-mean -1.0 \
         --bam {input.bam} {params.genomedir} {params.prefix}
