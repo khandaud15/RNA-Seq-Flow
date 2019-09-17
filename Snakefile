@@ -1,3 +1,8 @@
+# @author: Daud Khan
+# @date: September july 03, 2019
+# @desc: Snakemake pipeline based on gtex and TopMed RNASeq parameters
+# @usage: snakemake -j 999 --configfile config.yaml --use-conda --nolock --cluster-config cluster.json --cluster "sbatch -A {cluster.account} -p {cluster.partition}  -N {cluster.N} -n {cluster.n}  -t {cluster.time} --mem {cluster.mem}"
+
 shell.prefix("source ~/.bash_profile; set -euo pipefail;")
 from util.varsub import varsub
 configfile: "config.yaml"
