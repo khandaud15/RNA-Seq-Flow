@@ -226,7 +226,6 @@ rule mark_dups:
 rule RNA_SeqC:
     input:
         gtf = config['reference']['collapsed_gtf'], # dont forget to collaspe the transcript using python script else it wont be proccessed
-        fasta = config['reference']['fasta']['hg38'],
         bam = config['datadirs']['dedup'] + "/" + "{file}_Aligned.sortedByCoord.out.md.bam"
     output: config['datadirs']['rnaseq_qc'] + "/" + "{file}_Aligned.sortedByCoord.out.md.bam.metrics.tsv",
     params:
@@ -235,8 +234,7 @@ rule RNA_SeqC:
         mem_mb= 10000
     shell:
         """
-         source ~/.profile
-         rnaseqc {input.gtf} {input.bam} --fasta={input.fasta} {params.prefix} --verbose
+         rnaseqc {input.gtf} {input.bam} {params.prefix} --legacy --verbose
         """
 
 
